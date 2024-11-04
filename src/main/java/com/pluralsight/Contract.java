@@ -11,7 +11,7 @@ public abstract class Contract {
     private double totalPrice;
     private double monthlyPayment;
 
-    public Contract(String date, String customerName, Vehicle vehicle) {
+    public Contract(String customerName, String customerEmail, Vehicle vehicle) {
         this.date = LocalDate.now().toString();
         this.customerName = customerName;
         this.customerEmail = customerEmail;
