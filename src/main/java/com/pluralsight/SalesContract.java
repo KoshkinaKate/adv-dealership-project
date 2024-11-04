@@ -87,17 +87,4 @@ public class SalesContract extends Contract {
             return 0.0; // if no financing = monthly payment is zero
         }
     }
-
-    // to String display contract details
-    @Override
-    public String toString() {
-        return "Sales Contract | " +
-                "Date: " + getDate() +
-                ", Customer: " + getCustomerName() +
-                ", Email: " + getCustomerEmail() +
-                ", Vehicle VIN: " + getVehicle().getVin() +
-                ", Total Price: $" + getTotalPrice() +
-                ", Monthly Payment: $" + getMonthlyPayment() +
-                ", Finance Option: " + (financeOption ? "Yes" : "No");
-    }
 }
