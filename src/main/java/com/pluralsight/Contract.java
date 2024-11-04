@@ -1,15 +1,18 @@
 package com.pluralsight;
+
+import java.time.LocalDate;
+
 //hold information common to all contracts - parent + abstract
 public abstract class Contract {
     private String date;
     private String customerName;
     private String customerEmail;
-    private Vehicle vehicle;
+    private Vehicle vehicle; // instance of Vehicle object with all data
     private double totalPrice;
     private double monthlyPayment;
 
-    public Contract(String date, String customerName, String customerEmail, Vehicle vehicle, double totalPrice, double monthlyPayment) {
-        this.date = date;
+    public Contract(String date, String customerName, Vehicle vehicle) {
+        this.date = LocalDate.now().toString();
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.vehicle = vehicle;
@@ -49,4 +52,10 @@ public abstract class Contract {
 
     public abstract double getTotalPrice();
     public abstract double getMonthlyPayment();
+
+
+    @Override
+    public String toString() {
+        return "Date: " + date;
+    }
 }
