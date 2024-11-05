@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class UserInterface {
     private Dealership dealership; //hold Dealership object
     private DealershipFileManager fileManager = new DealershipFileManager(); //an instance of DFM that assigned to the fileManager
+    private ContractFileManager contractFileManager = new ContractFileManager();
     Scanner scanner = new Scanner(System.in);
 
     //empty constructor
@@ -48,6 +49,12 @@ public class UserInterface {
                 case 9:
                     processRemoveVehicleRequest();
                     break;
+                case 10:
+                    processSellVehicleRequest();
+                    break;
+                case 11:
+                    processLeaseVehicleRequest();
+                    break;
                 case 99:
                     System.out.println("Thank you for visiting our Dealership! ");
                     return;
@@ -69,6 +76,8 @@ public class UserInterface {
         System.out.println("7- All vehicles ");
         System.out.println("8- Add a vehicle ");
         System.out.println("9- Remove a vehicle ");
+        System.out.println("10- Sell a vehicle "); // SALE
+        System.out.println("11- Lease a vehicle "); // LEASE
         System.out.println("99-  Exit");
 
         System.out.println("========================");
@@ -185,6 +194,14 @@ public class UserInterface {
         } else {
             System.out.println("Vehicle with VIN " + vin + " not found.");
         }
+
+    }
+
+    public void processSellVehicleRequest(){
+
+    }
+
+    public void processLeaseVehicleRequest(){
 
     }
 }
