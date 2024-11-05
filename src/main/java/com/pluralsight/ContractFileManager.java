@@ -13,7 +13,7 @@ public class ContractFileManager {
             if (contract instanceof SalesContract) { //if this is true it casts on line 15
                 //SALE
                 SalesContract salesContract = (SalesContract) contract;
-                writer.write("SALE," + salesContract.getDate() + "|" + salesContract.getCustomerName() + "|" +
+                writer.write("SALE|" + salesContract.getDate() + "|" + salesContract.getCustomerName() + "|" +
                         salesContract.getCustomerEmail() + "|" + salesContract.getVehicle().getVin() + "|" +
                         salesContract.getVehicle().getYear() + "|" + salesContract.getVehicle().getMake() + "|" +
                         salesContract.getVehicle().getModel() + "|" + salesContract.getVehicle().getVehicleType() + "|" +
@@ -25,7 +25,7 @@ public class ContractFileManager {
             } else if (contract instanceof LeaseContract) {
                 // LEASE
                 LeaseContract leaseContract = (LeaseContract) contract;
-                writer.write("LEASE," + leaseContract.getDate() + "|" + leaseContract.getCustomerName() + "|" +
+                writer.write("LEASE|" + leaseContract.getDate() + "|" + leaseContract.getCustomerName() + "|" +
                         leaseContract.getCustomerEmail() + "|" + leaseContract.getVehicle().getVin() + "|" +
                         leaseContract.getVehicle().getYear() + "|" + leaseContract.getVehicle().getMake() + "|" +
                         leaseContract.getVehicle().getModel() + "|" + leaseContract.getVehicle().getVehicleType() + "|" +

@@ -1,5 +1,6 @@
 package com.pluralsight;
 //menu for a user
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -198,7 +199,7 @@ public class UserInterface {
     }
 
     public void processSellVehicleRequest(){
-        System.out.println("Please enter VIN of the vechicle to buy: ");
+        System.out.println("Please enter VIN of the vehicle to buy: ");
         int vin = scanner.nextInt();
         scanner.nextLine();
 
@@ -220,13 +221,43 @@ public class UserInterface {
             fileManager.saveDealership(dealership);
             System.out.println("Thank you for purchase of " + vehicle.getMake() + " " + vehicle.getModel());
         }else{
-            System.out.println("Sorry, vehicle " + vin + " not found. ");
+            System.out.println("Sorry, vehicle " + vin + " not found.");
 
         }
 
     }
 
     public void processLeaseVehicleRequest(){
+        System.out.println("Please enter VIN of the vehicle to lease: ");
+        int vin = scanner.nextInt();
+        scanner.nextLine();
+
+        Vehicle vehicle = dealership.getVehicleByVin(vin);
+        if (vehicle == null) {
+            System.out.println("Sorry, vehicle " + vin + " not found.");
+            return;
+        }
+        //determine if car is eligible for a lease
+        int now = LocalDate.now().getYear();
+        int vehicleAge = now - vehicle.getYear();
+        if (vehicleAge > 3){
+            System.out.println("Unfortunately, this vehicle not for a lease (must be 3 years old or newer)");
+            return;
+        }
+            System.out.println("Please enter your name: ");
+            String customerName = scanner.nextLine();
+            System.out.println("Pleaser enter an email: ");
+            String customerEmail = scanner.nextLine();
+
+            //lease contract
+            LeaseContract leaseContract = new LeaseContract(customerName, customerEmail, vehicle);
+            contractFileManager.saveContract(leaseContract);
+
+            //removing
+            dealership.removeVehicle(vehicle);
+            fileManager.saveDealership(dealership);
+            System.out.println("Vehicle " + vehicle.getMake() + " " + vehicle.getModel() + " is leased");
+
 
     }
 }
