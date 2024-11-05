@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4eaad7c3-6dc6-436d-9b8c-dbd3ba038948" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/contracts.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dealership.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dealership.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/ContractFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/ContractFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +49,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/imgs" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>

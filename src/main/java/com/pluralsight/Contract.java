@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 //hold information common to all contracts - parent + abstract
 public abstract class Contract {
@@ -12,7 +13,8 @@ public abstract class Contract {
     private double monthlyPayment;
 
     public Contract(String customerName, String customerEmail, Vehicle vehicle) {
-        this.date = LocalDate.now().toString();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        this.date = LocalDate.now().format(formatter);
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.vehicle = vehicle;

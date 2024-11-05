@@ -13,25 +13,25 @@ public class ContractFileManager {
             if (contract instanceof SalesContract) { //if this is true it casts on line 15
                 //SALE
                 SalesContract salesContract = (SalesContract) contract;
-                writer.write("SALE," + salesContract.getDate() + "," + salesContract.getCustomerName() + "," +
-                        salesContract.getCustomerEmail() + "," + salesContract.getVehicle().getVin() + "," +
-                        salesContract.getVehicle().getYear() + "," + salesContract.getVehicle().getMake() + "," +
-                        salesContract.getVehicle().getModel() + "," + salesContract.getVehicle().getVehicleType() + "," +
-                        salesContract.getVehicle().getColor() + "," + salesContract.getVehicle().getOdometer() + "," +
-                        salesContract.getVehicle().getPrice() + "," + salesContract.getSalesTaxAmount() + "," +
-                        salesContract.getRecordingFee() + "," + salesContract.getProcessingFee() + "," +
-                        salesContract.getTotalPrice() + "," + (salesContract.isFinanceOption() ? "YES" : "NO") + "," +
+                writer.write("SALE," + salesContract.getDate() + "|" + salesContract.getCustomerName() + "|" +
+                        salesContract.getCustomerEmail() + "|" + salesContract.getVehicle().getVin() + "|" +
+                        salesContract.getVehicle().getYear() + "|" + salesContract.getVehicle().getMake() + "|" +
+                        salesContract.getVehicle().getModel() + "|" + salesContract.getVehicle().getVehicleType() + "|" +
+                        salesContract.getVehicle().getColor() + "|" + salesContract.getVehicle().getOdometer() + "|" +
+                        salesContract.getVehicle().getPrice() + "|" + salesContract.getSalesTaxAmount() + "|" +
+                        salesContract.getRecordingFee() + "|" + salesContract.getProcessingFee() + "|" +
+                        salesContract.getTotalPrice() + "|" + (salesContract.isFinanceOption() ? "YES" : "NO") + "|" +
                         salesContract.getMonthlyPayment());
             } else if (contract instanceof LeaseContract) {
                 // LEASE
                 LeaseContract leaseContract = (LeaseContract) contract;
-                writer.write("LEASE," + leaseContract.getDate() + "," + leaseContract.getCustomerName() + "," +
-                        leaseContract.getCustomerEmail() + "," + leaseContract.getVehicle().getVin() + "," +
-                        leaseContract.getVehicle().getYear() + "," + leaseContract.getVehicle().getMake() + "," +
-                        leaseContract.getVehicle().getModel() + "," + leaseContract.getVehicle().getVehicleType() + "," +
-                        leaseContract.getVehicle().getColor() + "," + leaseContract.getVehicle().getOdometer() + "," +
-                        leaseContract.getVehicle().getPrice() + "," + leaseContract.getExpectedEndingValue() + "," +
-                        leaseContract.getLeaseFee() + "," + leaseContract.getTotalPrice() + "," +
+                writer.write("LEASE," + leaseContract.getDate() + "|" + leaseContract.getCustomerName() + "|" +
+                        leaseContract.getCustomerEmail() + "|" + leaseContract.getVehicle().getVin() + "|" +
+                        leaseContract.getVehicle().getYear() + "|" + leaseContract.getVehicle().getMake() + "|" +
+                        leaseContract.getVehicle().getModel() + "|" + leaseContract.getVehicle().getVehicleType() + "|" +
+                        leaseContract.getVehicle().getColor() + "|" + leaseContract.getVehicle().getOdometer() + "|" +
+                        leaseContract.getVehicle().getPrice() + "|" + leaseContract.getExpectedEndingValue() + "|" +
+                        leaseContract.getLeaseFee() + "|" + leaseContract.getTotalPrice() + "|" +
                         leaseContract.getMonthlyPayment());
             }
             writer.newLine(); //newline after each contact entry

@@ -76,7 +76,7 @@ public class UserInterface {
         System.out.println("7- All vehicles ");
         System.out.println("8- Add a vehicle ");
         System.out.println("9- Remove a vehicle ");
-        System.out.println("10- Sell a vehicle "); // SALE
+        System.out.println("10- Buy a vehicle "); // SALE
         System.out.println("11- Lease a vehicle "); // LEASE
         System.out.println("99-  Exit");
 
@@ -198,6 +198,31 @@ public class UserInterface {
     }
 
     public void processSellVehicleRequest(){
+        System.out.println("Please enter VIN of the vechicle to buy: ");
+        int vin = scanner.nextInt();
+        scanner.nextLine();
+
+        Vehicle vehicle = dealership.getVehicleByVin(vin);
+        if (vehicle != null) {
+            System.out.println("Please enter your name: ");
+            String customerName = scanner.nextLine();
+            System.out.println("Pleaser enter an email: ");
+            String customerEmail = scanner.nextLine();
+            System.out.println("Would you like to finance the vehicle? (yes/no): ");
+            boolean financeOption = scanner.nextLine().equalsIgnoreCase("yes");
+
+            //creating sales contract
+            SalesContract salesContract = new SalesContract(customerName, customerEmail, vehicle, financeOption);
+            contractFileManager.saveContract(salesContract);
+
+            //removing vehicle from a dealership
+            dealership.removeVehicle(vehicle);
+            fileManager.saveDealership(dealership);
+            System.out.println("Thank you for purchase of " + vehicle.getMake() + " " + vehicle.getModel());
+        }else{
+            System.out.println("Sorry, vehicle " + vin + " not found. ");
+
+        }
 
     }
 
