@@ -23,7 +23,6 @@ public class LeaseContract extends Contract {
         this.expectedEndingValue = expectedEndingValue;
     }
 
-    // Getter and setter for leaseFee
     public double getLeaseFee() {
         return leaseFee;
     }
