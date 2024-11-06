@@ -2,7 +2,7 @@
 
 ## Description of the Project
 
-This Java console application simulates a dealership management system, allowing users to browse available vehicles, search by various criteria (such as price, make/model, and mileage), and manage the dealership inventory by adding or removing vehicles. Users can interact with a menu-driven interface to easily view and filter vehicles or modify the inventory.
+This Java console application simulates a dealership management system, allowing users to browse available vehicles, search by various criteria (such as price, make/model, and mileage), and manage the dealership inventory by adding or removing vehicles. Additionally, the application supports creating **sales** and **lease** contracts for customers, with specific criteria such as vehicle age restrictions for leases and customizable contract fees. Users interact with a menu-driven interface to easily view, filter, and modify the inventory or manage contracts.
 
 ## User Stories
 
@@ -11,6 +11,7 @@ The following user stories guided the development of this application:
 - **As a customer**, I want to view all available vehicles to see the inventory and select a potential purchase.
 - **As a customer**, I want to search for vehicles based on price, make/model, year, color, mileage, and type so that I can find the vehicle that best meets my needs.
 - **As a user**, I want to add/remove new vehicles to the inventory so that customers have up-to-date options.
+- **As a customer**, I want to have the option to buy or lease a vehicle with clear contract details, including total cost and monthly payments if financed.
 ## Setup
 
 Instructions on how to set up and run the project using IntelliJ IDEA.
@@ -38,6 +39,10 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## Demo
 ### Purchase of the vehicle
 ![PurchaseOfVehicle.png](imgs/PurchaseOfVehicle.png)
+### Car for a lease
+![Lease.png](imgs/Lease.png)
+### Lease restriction of "must be 3 years old or younger"
+![LeaseAge.png](imgs/LeaseAge.png)
 
 ## Future Work
 
@@ -46,4 +51,4 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Thanks
 
-- Thank you to Raymond and Emre for continuous support and guidance.
+- Thank you to Raymond for continuous support and guidance.
